@@ -73,7 +73,7 @@ Incluyen la interfaz CLI y el controlador que transforma las entradas del usuari
 
 ## Requisitos
 
-- Java 17 o superior.
+- Java 25 o superior.
 - Maven 3.9 o superior.
 
 ## Ejecutar pruebas

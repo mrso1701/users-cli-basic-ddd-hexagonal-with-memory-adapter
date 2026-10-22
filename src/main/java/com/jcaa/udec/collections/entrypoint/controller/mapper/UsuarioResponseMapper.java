@@ -1,9 +1,10 @@
 package com.jcaa.udec.collections.entrypoint.controller.mapper;
 
+import java.util.List;
+
 import com.jcaa.udec.collections.domain.core.model.Usuario;
 import com.jcaa.udec.collections.entrypoint.controller.dto.response.ObtenerUsuarioResponse;
 import com.jcaa.udec.collections.entrypoint.controller.dto.response.UsuarioResponse;
-import java.util.List;
 
 public final class UsuarioResponseMapper {
     private UsuarioResponseMapper() {

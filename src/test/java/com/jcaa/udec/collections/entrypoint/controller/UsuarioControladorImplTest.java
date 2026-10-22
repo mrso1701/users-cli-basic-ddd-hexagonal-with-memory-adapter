@@ -1,6 +1,10 @@
 package com.jcaa.udec.collections.entrypoint.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.assertj.core.api.Assertions.assertThat;
+import org.junit.jupiter.api.Test;
 
 import com.jcaa.udec.collections.application.service.dto.command.CrearUsuarioComando;
 import com.jcaa.udec.collections.application.service.dto.query.ObtenerUsuarioConsulta;
@@ -10,9 +14,6 @@ import com.jcaa.udec.collections.domain.core.model.Usuario;
 import com.jcaa.udec.collections.entrypoint.controller.dto.request.RegistrarUsuarioPeticion;
 import com.jcaa.udec.collections.entrypoint.controller.dto.response.ObtenerUsuarioResponse;
 import com.jcaa.udec.collections.entrypoint.controller.dto.response.UsuarioResponse;
-import java.util.ArrayList;
-import java.util.List;
-import org.junit.jupiter.api.Test;
 
 class UsuarioControladorImplTest {
     private static final String ID = "123";
