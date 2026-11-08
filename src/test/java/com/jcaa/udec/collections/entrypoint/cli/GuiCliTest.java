@@ -128,7 +128,7 @@ class GuiCliTest {
 
     private static GuiCli crearGuiCli(UsuarioControlador controlador, String... entradas) {
         String contenido = String.join(System.lineSeparator(), entradas) + System.lineSeparator();
-        return new GuiCli(controlador, new Scanner(contenido));
+        return new GuiCli(controlador,new Scanner(contenido));
     }
 
     private static String capturarSalida(Runnable accion) {
