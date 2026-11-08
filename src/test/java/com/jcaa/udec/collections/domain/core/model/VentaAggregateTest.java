@@ -1,9 +1,8 @@
 package com.jcaa.udec.collections.domain.core.model;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
 import java.math.BigDecimal;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
 import com.jcaa.udec.collections.domain.core.exception.VehiculoNoDisponibleException;
