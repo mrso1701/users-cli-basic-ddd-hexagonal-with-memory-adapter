@@ -1,5 +1,7 @@
 package com.jcaa.udec.collections.entrypoint.cli;
 
+import java.util.Scanner;
+
 import com.jcaa.udec.collections.domain.core.exception.UsuarioInvalidoException;
 import com.jcaa.udec.collections.domain.core.exception.UsuarioNoExisteException;
 import com.jcaa.udec.collections.domain.core.exception.UsuarioYaExisteException;
@@ -8,10 +10,9 @@ import com.jcaa.udec.collections.domain.core.valueobject.NombreUsuario;
 import com.jcaa.udec.collections.domain.core.valueobject.Password;
 import com.jcaa.udec.collections.domain.core.valueobject.UsuarioId;
 import com.jcaa.udec.collections.entrypoint.controller.UsuarioControlador;
+import com.jcaa.udec.collections.entrypoint.controller.VehiculoControlador;
 import com.jcaa.udec.collections.entrypoint.controller.dto.request.RegistrarUsuarioPeticion;
 import com.jcaa.udec.collections.entrypoint.controller.dto.response.ObtenerUsuarioResponse;
-
-import java.util.Scanner;
 
 public class GuiCli {
     private static final int OPCION_AGREGAR = 1;
@@ -44,17 +45,22 @@ public class GuiCli {
     private static final String MARCA_ORDEN_BYTES = "\uFEFF";
     private static final String TEXTO_VACIO = "";
     private final UsuarioControlador usuarioControlador;
+    private final VehiculoControlador vehiculoControlador;
     private final Scanner entrada;
 
-    public GuiCli(UsuarioControlador usuarioControlador) {
-        this(usuarioControlador, new Scanner(System.in));
+    public GuiCli(UsuarioControlador usuarioControlador, Scanner entrada) {
+        this(usuarioControlador, null, entrada);
     }
 
-    GuiCli(UsuarioControlador usuarioControlador, Scanner entrada) {
+    public GuiCli(UsuarioControlador usuarioControlador) {
+        this(usuarioControlador, null, new Scanner(System.in));
+    }
+
+    public GuiCli(UsuarioControlador usuarioControlador, VehiculoControlador vehiculoControlador, Scanner entrada) {
         this.usuarioControlador = usuarioControlador;
+        this.vehiculoControlador = vehiculoControlador;
         this.entrada = entrada;
     }
-
     public int obtenerOpcionMenu() {
         do {
             mostrarMenu();
